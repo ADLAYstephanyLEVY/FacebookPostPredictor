@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Prediction</title>
+
+<style>
+.footer{
+position: fixed;
+left: 0;
+bottom: 0;
+width: 100%;
+background-color: gray;
+color: white;
+text-align: center;
+}
+.btn {
+  border: 2px solid gray;
+  color: gray;
+  background-color: white;
+  padding: 8px 20px;
+  border-radius: 8px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.predictor {
+  position: center;
+  overflow: hidden;
+  display: inline-block;
+  text-align: center;
+}
+</style>
+
+</head>
+    <body>
+        <p> Archivo cargado </p>
+        <form action="http://localhost:5000/uploader" method="POST">
+            <div>
+            <h1> {{ bestPredictor }}</h1>            
+            </div>
+        </form>
+        <form action="http://localhost:5000/formulario" method="POST">
+            <label for="xType">Type</label>
+            <select id="xType" name="xType">
+                    <option value="1">Photo</option>
+                    <option value="2">Multiple photos</option>
+                    <option value="3">Video</option>
+                    <option value="4">Link</option>
+                </select>
+            <label for="xDate">Date</label>
+            <select id="xDate" name="xDate">
+                    <option value="1">Sunday</option>
+                    <option value="2">Monday</option>
+                    <option value="3">Tuesday</option>
+                    <option value="4">Wednesday</option>
+                    <option value="5">Thursday</option>
+                    <option value="6">Friday</option>
+                    <option value="7">Saturday</option>
+                </select>
+            <label for="xHour">Hour</label>
+            <select id="xHour" name="xHour">
+                    <option value="0">00:00 hrs</option>
+                    <option value="1">01:00 hrs</option>
+                    <option value="2">02:00 hrs</option>
+                    <option value="3">03:00 hrs</option>
+                    <option value="4">04:00 hrs</option>
+                    <option value="5">05:00 hrs</option>
+                    <option value="6">06:00 hrs</option>
+                    <option value="7">07:00 hrs</option>
+                    <option value="8">08:00 hrs</option>
+                    <option value="9">09:00 hrs</option>
+                    <option value="10">10:00 hrs</option>
+                    <option value="11">11:00 hrs</option>
+                    <option value="12">12:00 hrs</option>
+                    <option value="13">13:00 hrs</option>
+                    <option value="14">14:00 hrs</option>
+                    <option value="15">15:00 hrs</option>
+                    <option value="16">16:00 hrs</option>
+                    <option value="17">17:00 hrs</option>
+                    <option value="18">18:00 hrs</option>
+                    <option value="19">19:00 hrs</option>
+                    <option value="20">20:00 hrs</option>
+                    <option value="21">21:00 hrs</option>
+                    <option value="22">22:00 hrs</option>
+                    <option value="23">23:00 hrs</option>
+                </select>
+                <br>
+                <p>Teniendo en cuenta el desempeño de tu página hasta ahora, en un entorno realista,
+                ingresa los valores esperados para tu siguiente post</p>
+                <label for="xShare">Times Shared</label>
+                <input type="text" id="xShare" name="xShare">
+                <br>
+                <label for="xReactions">Reactions</label>
+                <input type="text" id="xReactions" name="xReactions">
+                <br>
+                <label for="xComment">Comments</label>
+                <input type="text" id="xComment" name="xComment">
+                <br>
+
+                </br>               
+                    <input type="submit" value="submit">
+                    <!--<button class="btn" type="submit">Predecir</button>-->
+                
+        </form>
+        <div class="footer">
+        <p>By Adlay Levy<p>
+    </div>
+    </body>
+</html>
